@@ -10,12 +10,12 @@
     const title = 'Henry Hub Natural Gas Spot price';
     
     const xValue = d => d.Date;
-    const xAxisLabel = 'Date';
+    const xAxisLabel = 'Year';
     
     const yValue = d => d.Price;
     const yAxisLabel = 'Price';
     
-    const margin = { top: 60, right: 20, bottom: 40, left: 50 };
+     const margin = { top: 60, right: 40, bottom: 88, left: 105 };
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
     
