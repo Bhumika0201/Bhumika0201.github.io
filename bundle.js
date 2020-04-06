@@ -21,6 +21,7 @@
     
     const xScale = d3.scaleTime()
       .domain(d3.extent(data, xValue))
+      
       .range([0, innerWidth])
       .nice();
     
@@ -32,11 +33,12 @@
     const g = svg.append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
     
-    const xAxis = d3.axisBottom(xScale)
-      .tickSize(-innerHeight)
-      .tickPadding(15);
+    const xAxis = d3.axisBottom(xScale)     
+     .scale(xScale)
+      
     
     const yAxis = d3.axisLeft(yScale)
+      .ticks(5)
       .tickSize(-innerWidth)
       .tickPadding(10);
     
@@ -75,7 +77,7 @@
     
     g.append('text')
         .attr('class', 'title')
-        .attr('y', -10)
+        .attr('y', -30)
         .text(title);
   };
 
