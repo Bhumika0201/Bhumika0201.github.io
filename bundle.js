@@ -13,7 +13,7 @@
     const xAxisLabel = 'Year';
     
     const yValue = d => d.Price;
-    const yAxisLabel = 'Price';
+    const yAxisLabel = 'Price in Dollars per million';
     
      const margin = { top: 60, right: 40, bottom: 88, left: 105 };
     const innerWidth = width - margin.left - margin.right;
