@@ -20,15 +20,14 @@
     const innerHeight = height - margin.top - margin.bottom;
     
     const xScale = d3.scaleTime()
-      .domain(d3.extent(data, xValue))
+      .domain(d3.extent(data, xValue))      
+      .range([0, innerWidth]);
       
-      .range([0, innerWidth])
-      .nice();
     
     const yScale = d3.scaleLinear()
       .domain(d3.extent(data, yValue))
-      .range([innerHeight, 0])
-      .nice();
+      .range([innerHeight, 0]);
+      
     
     const g = svg.append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
